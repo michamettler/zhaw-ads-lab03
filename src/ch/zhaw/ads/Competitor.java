@@ -71,8 +71,10 @@ class AlphaComparatorCompetitor implements Comparator<Competitor> {
 
     @Override
     public int compare(Competitor o1, Competitor o2) {
-        // TODO Implement
-        int c = 0;
+        int c = o1.getName().compareTo(o2.getName());
+        if (c == 0) {
+            return o1.compareTo(o2);
+        }
         return c;
     }
 }
